@@ -1,0 +1,25 @@
+@import '../../__data__/styles/colors';
+@import '../../__data__/styles/sizes';
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $pink;
+  height: 3.75rem;
+}
+
+.footer_ref {
+  margin-right: $offset-md;
+  height: 3.125rem;
+
+  :hover {
+    opacity: 0.5;
+    transition: 0.65s;
+  }
+
+  :not(:hover) {
+    transition: 1s;
+  }
+}

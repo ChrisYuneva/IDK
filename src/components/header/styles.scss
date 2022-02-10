@@ -1,0 +1,23 @@
+@import '../../__data__/styles/colors';
+@import '../../__data__/styles/sizes';
+
+.header {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.75rem;
+  background-color: $pink;
+  top: 0;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin-left: $offset-bmd;
+}
+
+.blue {
+  background-color: $blue;
+}
