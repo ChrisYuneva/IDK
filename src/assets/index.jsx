@@ -7,7 +7,7 @@ import img2 from "./images/img2.jpg";
 import img3 from "./images/img3.jpg";
 import img4 from "./images/img4.jpg";
 import arrow_right from "./icons/arrow-right.svg";
-import arrow_left from "./icons/arrow_left.svg";
+import arrow_left from "./icons/arrow-left.svg";
 import nature from "./images/nature.jpg";
 import pink1 from "./images/pink1.png";
 import pink2 from "./images/pink2.png";

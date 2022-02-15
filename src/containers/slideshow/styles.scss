@@ -6,8 +6,27 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  transition: margin .5s;
+  margin-top: 6.25rem;
+}
+
+.img-slide {
+  width: 43.75rem;
+  height: 25rem;
+  border-radius: 0.3125rem;
+}
+
+.button-slide {
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.button-slide-img {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .fade {
@@ -15,32 +34,6 @@
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-.test2 {
-  transition: all 600ms ease;
-}
-
-.test {
-  width: 700px;
-  height: 400px;
-  border-radius: 5px;
-  transition: red .3s;
-}
-
-.button {
-  width: 50px;
-  height: 50px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  background-color: inherit;
-}
-
-
-.button_img {
-  width: 40px;
-  height: 40px;
 }
 
 @-webkit-keyframes fade {

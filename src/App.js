@@ -26,11 +26,7 @@ function App() {
   return (
     <div>
       <Slideshow />
-      {/*<Header color='pink' text={'test1'} />*/}
-      {/*<div>*/}
       {/*  <Lottie options={defaultOptions} height={700} width={700} />*/}
-      {/*</div>*/}
-      {/*  <Footer/>*/}
     </div>
   );
 }

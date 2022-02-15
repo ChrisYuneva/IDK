@@ -17,16 +17,14 @@ const img = [
 ];
 
 function Slideshow() {
-  // keep хранит в себе state-состояние объекта
-  // change изменяет состояние объекта, это функция
-
-  let classes = ["test"];
+  let classes = ["img-slide"];
 
   let [count, setCount] = useState(0);
 
   const forward = () => {
     setCount(count + 1);
     classes.push("fade");
+    console.log(classes);
     if (count > img.length - 2) {
       setCount((count = 0));
     }
@@ -47,11 +45,11 @@ function Slideshow() {
     <div>
       <Header />
       <div className={"container"}>
-        <button onClick={back} className={"button"}>
+        <button onClick={back} className={"button-slide"}>
           <Image
             src={assets.arrow_left}
             alt={"Arrow left"}
-            style={"button_img"}
+            style={"button-slide-img"}
           />
         </button>
         <Image
@@ -59,11 +57,11 @@ function Slideshow() {
           alt={"Slideshow image"}
           style={classes.join(" ")}
         />
-        <button onClick={forward} className={"button fade"}>
+        <button onClick={forward} className={"button-slide"}>
           <Image
             src={assets.arrow_right}
             alt={"Arrow right"}
-            style={"button_img"}
+            style={"button-slide-img"}
           />
         </button>
       </div>
