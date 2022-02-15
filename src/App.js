@@ -1,21 +1,12 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import Lottie from "react-lottie";
-import animationData from "./lotties/test.json";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Slideshow from "./containers/slideshow/slideshow";
+import NotFound from "./containers/notfound/notfound";
+import Test from "./components/test/test";
+import Main from "./containers/main/main";
 
 function App() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   // useEffect(() => {
   //   const timer = setTimeout(() => {
   //     console.log('This will run after 1 second!')
@@ -24,10 +15,16 @@ function App() {
   // }, []);
 
   return (
-    <div>
-      <Slideshow />
-      {/*  <Lottie options={defaultOptions} height={700} width={700} />*/}
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/slideshow" element={<Slideshow />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

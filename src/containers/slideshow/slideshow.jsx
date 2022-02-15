@@ -44,12 +44,12 @@ function Slideshow() {
   return (
     <div>
       <Header />
-      <div className={"container"}>
+      <div className={"container-slideshow"}>
         <button onClick={back} className={"button-slide"}>
           <Image
             src={assets.arrow_left}
             alt={"Arrow left"}
-            style={"button-slide-img"}
+            style="button-slide-img"
           />
         </button>
         <Image

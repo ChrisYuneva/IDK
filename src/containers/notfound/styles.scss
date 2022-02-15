@@ -1,0 +1,26 @@
+@import '../../__data__/styles/colors';
+@import '../../__data__/styles/sizes';
+
+.container-notfound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notfound-span {
+  font-size: $offset-md;
+}
+
+.notfound-link {
+  text-decoration: none;
+  font-size: $offset-md;
+  color: $pink;
+  margin-left: 0.6rem;
+}
+
+.line {
+  display: flex;
+}
+
