@@ -1,0 +1,48 @@
+@import '../../__data__/styles/colors';
+@import '../../__data__/styles/sizes';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.25rem;
+}
+
+.img-slide {
+  width: 43.75rem;
+  height: 25rem;
+  border-radius: 0.3125rem;
+}
+
+.button-slide {
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.button-slide-img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+

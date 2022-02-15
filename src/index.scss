@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Inter-Regular';
+  font-style: normal;
+  src: local('Inter-Regular'), url("../public/fonts/Inter-Regular.ttf") format('ttf');
+}
+
+* {
+  font-family: 'Inter-Regular', sans-serif;
+  padding: 0;
+  margin: 0;
+}

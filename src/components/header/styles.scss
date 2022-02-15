@@ -1,0 +1,20 @@
+@import '../../__data__/styles/colors';
+@import '../../__data__/styles/sizes';
+
+.header {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.75rem;
+  width: 100vw;
+  background: linear-gradient(180deg, #D28F96 0%, rgba(210, 143, 150, 0.5244) 56.56%, rgba(233, 202, 205, 0) 100%);
+  top: 0;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin-left: $offset-bmd;
+}
