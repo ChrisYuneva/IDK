@@ -7,10 +7,8 @@ import "./styles.scss";
 function Header() {
   return (
     <header className={"header"}>
-      <Link to={"/"} className={'header-ref'}>
-          <h2 className={'text-logo'}>
-              IDK
-          </h2>
+      <Link to={"/"} className={"header-ref"}>
+        <h2 className={"text-logo"}>IDK</h2>
         {/*<img src={assets.logo_test} alt={"Logo"} className={"logo"} />*/}
       </Link>
 

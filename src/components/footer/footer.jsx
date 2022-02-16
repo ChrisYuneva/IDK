@@ -16,13 +16,13 @@ function Footer() {
         src={assets.logo_telegram}
         alt={"Logo Telegram"}
         style={"footer_ref"}
-        href={"https://github.com/ChrisYuneva"}
+        href={"https://t.me/chris_yuneva"}
       />
       <Ref
         src={assets.logo_codewars}
         alt={"Logo Codewars"}
         style={"footer_ref"}
-        href={"https://github.com/ChrisYuneva"}
+        href={"https://www.codewars.com/users/ChrisYuneva"}
       />
     </footer>
   );

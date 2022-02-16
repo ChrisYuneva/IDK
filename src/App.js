@@ -9,45 +9,40 @@ import animationData from "./lotties/loading.json";
 import "./App.css";
 
 function App() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice",
-        },
-    };
+  let [loading, setLoading] = useState(true);
 
-    let [loading, setLoading] = useState(true);
+  const componentDidMount = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
 
-    const componentDidMount = () => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 2000)
-    }
+  componentDidMount();
 
-    componentDidMount();
-
-    if(loading === true) {
-        return (
-                <Lottie options={defaultOptions} height={700} width={700} />
-        )
-    }
-    else {
-        return (
-            <Router>
-                <div>
-                    <Routes>
-                        <Route path="/" element={<Main />} />
-                        <Route path="/slideshow" element={<Slideshow />} />
-                        <Route path="*" element={<NotFound />} />
-                    </Routes>
-                </div>
-            </Router>
-        );
-    }
-    }
-
+  if (loading === true) {
+    return <Lottie options={defaultOptions} height={700} width={700} />;
+  } else {
+    return (
+      <Router>
+        <div>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/slideshow" element={<Slideshow />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
+    );
+  }
+}
 
 export default App;
