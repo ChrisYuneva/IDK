@@ -1,29 +1,53 @@
-import "./App.css";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Slideshow from "./containers/slideshow/slideshow";
 import NotFound from "./containers/notfound/notfound";
 import Main from "./containers/main/main";
+import Lottie from "react-lottie";
+import animationData from "./lotties/loading.json";
+
+import "./App.css";
 
 function App() {
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     console.log('This will run after 1 second!')
-  //   }, 3000);
-  //   return () => clearTimeout(timer);
-  // }, []);
 
-  return (
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/slideshow" element={<Slideshow />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+        },
+    };
+
+    let [loading, setLoading] = useState(true);
+
+    const componentDidMount = () => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000)
+    }
+
+    componentDidMount();
+
+    if(loading === true) {
+        return (
+                <Lottie options={defaultOptions} height={700} width={700} />
+        )
+    }
+    else {
+        return (
+            <Router>
+                <div>
+                    <Routes>
+                        <Route path="/" element={<Main />} />
+                        <Route path="/slideshow" element={<Slideshow />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </div>
+            </Router>
+        );
+    }
+    }
+
 
 export default App;
