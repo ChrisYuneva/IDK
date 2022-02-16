@@ -19,6 +19,18 @@
   margin-left: $offset-bmd;
 }
 
+.text-logo {
+  font-family: 'Inter-SemiBold', sans-serif;
+  text-decoration: none;
+  color: $white;
+  font-size: 2.3rem;
+  margin-left: $offset-md;
+}
+
+.header-ref {
+  text-decoration: none;
+}
+
 .header-link {
   text-decoration: none;
   color: $white;

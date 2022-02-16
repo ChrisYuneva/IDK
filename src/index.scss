@@ -4,6 +4,12 @@
   src: local('Inter-Regular'), url("../public/fonts/Inter-Regular.ttf") format('ttf');
 }
 
+@font-face {
+  font-family: 'Inter-SemiBold';
+  font-style: normal;
+  src: local('Inter-SemiBold'), url("../public/fonts/Inter-SemiBold.ttf") format('ttf');
+}
+
 * {
   font-family: 'Inter-Regular', sans-serif;
   padding: 0;

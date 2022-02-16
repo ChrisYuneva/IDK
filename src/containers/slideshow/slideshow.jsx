@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../../components/header/header";
-import Image from "../../components/image/image";
 import Footer from "../../components/footer/footer";
 import assets from "../../assets";
 
@@ -21,16 +20,16 @@ function Slideshow() {
 
   let [count, setCount] = useState(0);
 
+  let arrayLength = img.length - 1;
+
   const forward = () => {
     setCount(count + 1);
     classes.push("fade");
     console.log(classes);
-    if (count > img.length - 2) {
+    if (count > arrayLength - 2) {
       setCount((count = 0));
     }
   };
-
-  let arrayLength = img.length - 1;
 
   const back = () => {
     if (count > 0) {
@@ -42,31 +41,31 @@ function Slideshow() {
   };
 
   return (
-    <div>
+    <>
       <Header />
       <div className={"container-slideshow"}>
         <button onClick={back} className={"button-slide"}>
-          <Image
-            src={assets.arrow_left}
+          <img
+            src={assets.arrow}
             alt={"Arrow left"}
-            style="button-slide-img"
+            className={"button-slide-img-left"}
           />
         </button>
-        <Image
+        <img
           src={img[count]}
           alt={"Slideshow image"}
-          style={classes.join(" ")}
+          className={classes.join(" ")}
         />
         <button onClick={forward} className={"button-slide"}>
-          <Image
-            src={assets.arrow_right}
+          <img
+            src={assets.arrow}
             alt={"Arrow right"}
-            style={"button-slide-img"}
+            className={"button-slide-img-right"}
           />
         </button>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

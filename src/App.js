@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Slideshow from "./containers/slideshow/slideshow";
 import NotFound from "./containers/notfound/notfound";
-import Test from "./components/test/test";
 import Main from "./containers/main/main";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/slideshow" element={<Slideshow />} />
-          <Route path="/test" element={<Test />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
