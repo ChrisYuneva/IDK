@@ -1,16 +1,24 @@
 @import '../../__data__/styles/colors';
 @import '../../__data__/styles/sizes';
 
+
 .container-slideshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-slideshow-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 6.25rem;
+  margin-top: 4.25rem;
 }
 
 .img-slide {
-  width: 43.75rem;
+  width: 53%;
   height: 25rem;
   border-radius: 0.3125rem;
   margin-right: $offset-sm;
@@ -39,6 +47,27 @@
   transform: rotate(90deg);
   opacity: 0.7;
 }
+
+.select-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  justify-content: space-evenly;
+}
+
+.button-change {
+  font-size: $offset-sm;
+  cursor: pointer;
+  width: 5rem;
+  height: 1.5rem;
+  background-color: $pink;
+  outline: none;
+  border: 1px solid $black;
+  border-radius: 0.3125rem;
+  color: $black;
+}
+
+
 
 .fade {
   -webkit-animation-name: fade;

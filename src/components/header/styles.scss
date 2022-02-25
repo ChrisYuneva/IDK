@@ -8,7 +8,6 @@
   justify-content: space-between;
   align-items: center;
   height: 3.75rem;
-  width: 100vw;
   background: linear-gradient(360deg, rgba(210, 143, 150, 0) 0%, rgba(210, 143, 150, 0.523958) 52.4%, #D28F96 100%);
   top: 0;
 }
@@ -22,7 +21,7 @@
 .text-logo {
   font-family: 'Inter-SemiBold', sans-serif;
   text-decoration: none;
-  color: $white;
+  color: $black;
   font-size: 2.3rem;
   margin-left: $offset-md;
 }
@@ -33,6 +32,6 @@
 
 .header-link {
   text-decoration: none;
-  color: $white;
+  color: $black;
   font-size: 1.25rem;
 }

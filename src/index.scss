@@ -10,6 +10,12 @@
   src: local('Inter-SemiBold'), url("../public/fonts/Inter-SemiBold.ttf") format('ttf');
 }
 
+@font-face {
+  font-family: 'Inter-Light';
+  font-style: normal;
+  src: local('Inter-SemiBold'), url("../public/fonts/Inter-Light.ttf") format('ttf');
+}
+
 * {
   font-family: 'Inter-Regular', sans-serif;
   padding: 0;

@@ -1,6 +1,22 @@
 @import '../../__data__/styles/colors';
 @import '../../__data__/styles/sizes';
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-greetings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .main-text {
+  font-family: 'Inter-Light', sans-serif;
   font-size: $offset-md;
+  width: 35rem;
 }

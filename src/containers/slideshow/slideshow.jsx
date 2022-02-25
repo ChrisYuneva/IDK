@@ -15,18 +15,41 @@ const img = [
   assets.pink7,
 ];
 
+const city = [
+  assets.city2,
+  assets.city3,
+  assets.city4,
+  assets.city5,
+  assets.city6,
+  assets.city7,
+  assets.city8,
+];
+
+const different = [
+  assets.different1,
+  assets.different2,
+  assets.different3,
+  assets.different4,
+  assets.different5,
+  assets.different6,
+];
+
 function Slideshow() {
   let classes = ["img-slide"];
 
   let [count, setCount] = useState(0);
 
-  let arrayLength = img.length - 1;
+  let [arr, setArr] = useState(img);
+
+  let [ch, setCh] = useState(0);
+
+  let arrayLength = arr.length - 1;
 
   const forward = () => {
     setCount(count + 1);
     classes.push("fade");
     console.log(classes);
-    if (count > arrayLength - 2) {
+    if (count > arrayLength - 1) {
       setCount((count = 0));
     }
   };
@@ -40,10 +63,34 @@ function Slideshow() {
     }
   };
 
+  const change = () => {
+    setCount(0);
+    setCh((ch += 1));
+    if (ch > 0) {
+      setArr((arr = city));
+    }
+  };
+
+  const change2 = () => {
+    setCount(0);
+    setCh((ch += 1));
+    if (ch > 0) {
+      setArr((arr = img));
+    }
+  };
+
+  const change3 = () => {
+    setCount(0);
+    setCh((ch += 1));
+    if (ch > 0) {
+      setArr((arr = different));
+    }
+  };
+
   return (
     <>
       <Header />
-      <div className={"container-slideshow"}>
+      <section className={"container-slideshow-section"}>
         <button onClick={back} className={"button-slide"}>
           <img
             src={assets.arrow}
@@ -52,7 +99,7 @@ function Slideshow() {
           />
         </button>
         <img
-          src={img[count]}
+          src={arr[count]}
           alt={"Slideshow image"}
           className={classes.join(" ")}
         />
@@ -62,6 +109,17 @@ function Slideshow() {
             alt={"Arrow right"}
             className={"button-slide-img-right"}
           />
+        </button>
+      </section>
+      <div className={"select-container"}>
+        <button onClick={change} className={"button-change"}>
+          Cities
+        </button>
+        <button onClick={change3} className={"button-change"}>
+          Different
+        </button>
+        <button onClick={change2} className={"button-change"}>
+          Nature
         </button>
       </div>
       <Footer />
