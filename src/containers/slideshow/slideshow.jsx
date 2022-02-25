@@ -39,16 +39,25 @@ function Slideshow() {
 
   let [count, setCount] = useState(0);
 
+  let [test, setTest] = useState(classes);
+
   let [arr, setArr] = useState(img);
 
   let [ch, setCh] = useState(0);
 
   let arrayLength = arr.length - 1;
 
+  const cls = () => {
+    if(count>1) {
+      classes.push('fade');
+    }
+    setTest(test=classes);
+  }
+
   const forward = () => {
+    cls();
     setCount(count + 1);
-    classes.push("fade");
-    console.log(classes);
+
     if (count > arrayLength - 1) {
       setCount((count = 0));
     }
@@ -57,7 +66,7 @@ function Slideshow() {
   const back = () => {
     if (count > 0) {
       setCount(count - 1);
-      classes.push("fade");
+      cls()
     } else {
       setCount((count = arrayLength));
     }
@@ -101,7 +110,7 @@ function Slideshow() {
         <img
           src={arr[count]}
           alt={"Slideshow image"}
-          className={classes.join(" ")}
+          className={test.join(" ")}
         />
         <button onClick={forward} className={"button-slide"}>
           <img
