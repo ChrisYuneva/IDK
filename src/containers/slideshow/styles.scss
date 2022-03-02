@@ -56,6 +56,9 @@
 }
 
 .button-change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: $offset-sm;
   cursor: pointer;
   width: 5rem;
@@ -69,9 +72,9 @@
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.3s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.3s;
 }
 
 @-webkit-keyframes fade {

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import assets from "../../assets";
 
 import "./styles.scss";
 
-const img = [
+const nature = [
   assets.pink1,
   assets.pink2,
   assets.pink3,
@@ -39,25 +39,24 @@ function Slideshow() {
 
   let [count, setCount] = useState(0);
 
-  let [test, setTest] = useState(classes);
+  let [style, setStyle] = useState(classes);
 
-  let [arr, setArr] = useState(img);
+  let [arr, setArr] = useState(nature);
 
   let [ch, setCh] = useState(0);
 
   let arrayLength = arr.length - 1;
 
-  const cls = () => {
-    if(count>1) {
-      classes.push('fade');
-    }
-    setTest(test=classes);
-  }
+  useEffect(() => {
+    setStyle(classes);
+    classes.push("fade");
+    setTimeout(() => {
+      classes.pop();
+    }, 0);
+  }, [count]);
 
   const forward = () => {
-    cls();
     setCount(count + 1);
-
     if (count > arrayLength - 1) {
       setCount((count = 0));
     }
@@ -66,33 +65,16 @@ function Slideshow() {
   const back = () => {
     if (count > 0) {
       setCount(count - 1);
-      cls()
     } else {
       setCount((count = arrayLength));
     }
   };
 
-  const change = () => {
+  const change = (arr) => {
     setCount(0);
     setCh((ch += 1));
     if (ch > 0) {
-      setArr((arr = city));
-    }
-  };
-
-  const change2 = () => {
-    setCount(0);
-    setCh((ch += 1));
-    if (ch > 0) {
-      setArr((arr = img));
-    }
-  };
-
-  const change3 = () => {
-    setCount(0);
-    setCh((ch += 1));
-    if (ch > 0) {
-      setArr((arr = different));
+      setArr(arr);
     }
   };
 
@@ -110,7 +92,7 @@ function Slideshow() {
         <img
           src={arr[count]}
           alt={"Slideshow image"}
-          className={test.join(" ")}
+          className={style.join(" ")}
         />
         <button onClick={forward} className={"button-slide"}>
           <img
@@ -121,13 +103,13 @@ function Slideshow() {
         </button>
       </section>
       <div className={"select-container"}>
-        <button onClick={change} className={"button-change"}>
+        <button onClick={() => change(city)} className={"button-change"}>
           Cities
         </button>
-        <button onClick={change3} className={"button-change"}>
+        <button onClick={() => change(different)} className={"button-change"}>
           Different
         </button>
-        <button onClick={change2} className={"button-change"}>
+        <button onClick={() => change(nature)} className={"button-change"}>
           Nature
         </button>
       </div>

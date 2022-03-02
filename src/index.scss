@@ -1,23 +1,7 @@
-@font-face {
-  font-family: 'Inter-Regular';
-  font-style: normal;
-  src: local('Inter-Regular'), url("../public/fonts/Inter-Regular.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: 'Inter-SemiBold';
-  font-style: normal;
-  src: local('Inter-SemiBold'), url("../public/fonts/Inter-SemiBold.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: 'Inter-Light';
-  font-style: normal;
-  src: local('Inter-Light'), url("../public/fonts/Inter-Light.ttf") format('ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
-  font-family: 'Inter-Regular', sans-serif;
+  font-family: 'Oswald', sans-serif;
   padding: 0;
   margin: 0;
 }

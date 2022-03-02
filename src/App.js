@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Slideshow from "./containers/slideshow/slideshow";
 import NotFound from "./containers/notfound/notfound";
@@ -18,15 +18,13 @@ function App() {
     },
   };
 
-  let [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  const componentDidMount = () => {
+  useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-  };
-
-  componentDidMount();
+  });
 
   if (loading === true) {
     return <Lottie options={defaultOptions} height={700} width={700} />;
