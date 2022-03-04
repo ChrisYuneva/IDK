@@ -7,6 +7,8 @@ import Lottie from "react-lottie";
 import animationData from "./lotties/loading.json";
 
 import "./App.css";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 function App() {
   const defaultOptions = {
@@ -23,8 +25,8 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
-  });
+    }, 1800);
+  }, []);
 
   if (loading === true) {
     return <Lottie options={defaultOptions} height={700} width={700} />;
@@ -32,11 +34,13 @@ function App() {
     return (
       <Router>
         <div>
+          <Header />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/slideshow" element={<Slideshow />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     );

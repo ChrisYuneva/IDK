@@ -80,7 +80,6 @@ function Slideshow() {
 
   return (
     <>
-      <Header />
       <section className={"container-slideshow-section"}>
         <button onClick={back} className={"button-slide"}>
           <img
@@ -113,7 +112,6 @@ function Slideshow() {
           Nature
         </button>
       </div>
-      <Footer />
     </>
   );
 }

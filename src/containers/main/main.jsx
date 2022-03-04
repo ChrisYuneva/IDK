@@ -18,7 +18,6 @@ function Main() {
 
   return (
     <>
-      <Header />
       <div className={"main-container"}>
         <section className={"main-greetings"}>
           <Lottie options={defaultOptions} height={400} width={400} />
@@ -29,8 +28,6 @@ function Main() {
           </span>
         </section>
       </div>
-
-      <Footer />
     </>
   );
 }
