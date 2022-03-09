@@ -15,6 +15,9 @@ function Header() {
       <Link to={"/slideshow"} className={"header-link"}>
         Slideshow
       </Link>
+      <Link to={"/fetch"} className={"header-link"}>
+        Fetch
+      </Link>
     </header>
   );
 }

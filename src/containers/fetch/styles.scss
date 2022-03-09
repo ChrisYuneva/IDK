@@ -1,0 +1,30 @@
+@import '../../__data__/styles/colors';
+@import '../../__data__/styles/sizes';
+
+.fetch_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.fetch_button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.fetch_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $offset-sm;
+  cursor: pointer;
+  width: 5rem;
+  height: 1.5rem;
+  background-color: $pink;
+  outline: none;
+  border: 1px solid $black;
+  border-radius: 0.3125rem;
+  color: $black;
+}
