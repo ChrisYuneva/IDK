@@ -1,16 +1,21 @@
 import React from "react";
 
+import './styles.scss';
+
 function Item({ title, name, phone, email, body }) {
   return (
-    <div className="article-content">
+    <div className="item_container">
       <div className="article-title">
-        <a href="/">{title}</a>
-        <a href="/">{name}</a>
+        <h3>{title}</h3>
+        <h3>{name}</h3>
       </div>
-      <p className="article-text">
+      <div className="article-text">
         {body}
-        {phone}
-      </p>
+
+      </div>
+        <span>
+            {phone}
+        </span>
       <p>{email}</p>
     </div>
   );
